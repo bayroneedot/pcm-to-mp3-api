@@ -35,7 +35,7 @@ async def convert_pcm_to_mp3(data: PCMData):
     os.remove(pcm_path)
 
     # return public URL to MP3
-    base_url = "https://your-render-url"  # replace with your Render URL
+    base_url = "https://pcm-to-mp3-api.onrender.com"  # replace with your Render URL
     mp3_url = f"{base_url}/converted/{mp3_filename}"
     return {"mp3_url": mp3_url}
 
