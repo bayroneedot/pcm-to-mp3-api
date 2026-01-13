@@ -6,6 +6,12 @@ import uuid
 
 app = FastAPI()
 
+@app.get("/warmup")
+def warmup():
+    return {
+        "status": "ok",
+        "message": "Server is warm"
+    }
 # Folder to store converted files (will be publicly served)
 os.makedirs("converted", exist_ok=True)
 
